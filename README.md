@@ -1,4 +1,6 @@
 # SIIAA
+IMPORTANTE 
+DESCARGAR LOS MODULOS DE NODE PARA TRABAJAR CON EL PROYECTO
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.3.
 
