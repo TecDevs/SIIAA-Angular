@@ -1,6 +1,6 @@
 # SIIAA
 IMPORTANTE 
-DESCARGAR LOS MODULOS DE NODE PARA TRABAJAR CON EL PROYECTO comando: nmp install
+DESCARGAR LOS MODULOS DE NODE PARA TRABAJAR CON EL PROYECTO comando: npm install
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.3.
 
