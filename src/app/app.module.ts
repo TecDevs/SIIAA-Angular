@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
+import { routes } from './app.routes';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { LoginComponent } from './components/shared/login/login.component';
@@ -22,6 +22,9 @@ import { AvancesComponent } from './components/recursos-humanos/reportes/avances
 import { PendientesComponent } from './components/recursos-humanos/reportes/pendientes/pendientes.component';
 import { GraficarResultadosComponent } from './components/recursos-humanos/reportes/graficar-resultados/graficar-resultados.component';
 import { DescargarResultadosComponent } from './components/recursos-humanos/reportes/descargar-resultados/descargar-resultados.component';
+import { FooterComponent } from './components/shared/footer/footer.component';
+import { HomeComponent } from './components/shared/home/home.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -44,11 +47,13 @@ import { DescargarResultadosComponent } from './components/recursos-humanos/repo
     AvancesComponent,
     PendientesComponent,
     GraficarResultadosComponent,
-    DescargarResultadosComponent
+    DescargarResultadosComponent,
+    FooterComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    RouterModule.forRoot( routes, { useHash: true } )
   ],
   providers: [],
   bootstrap: [AppComponent]

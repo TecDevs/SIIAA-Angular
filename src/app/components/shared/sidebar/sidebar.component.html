@@ -1,1 +1,64 @@
-<p>sidebar works!</p>
+<div id="layoutSidenav_nav">
+    <nav class="sb-sidenav accordion sb-sidenav-light" id="sidenavAccordion">
+        <div class="sb-sidenav-menu">
+            <div class="nav">
+                <div class="sb-sidenav-menu-heading">
+                    <div class="col-12 foto">
+                        <a href="#">
+                            <img class="imagen" src="assets/img/chino.png" height="150" width="150" alt="" /></a>
+                    </div>
+                    <h5 class="titulo-nombre">Raul Hernandez</h5>
+                    <h5 class="titulo-usuario">Administrador</h5>
+                </div>
+                <div class="sb-sidenav-menu-heading">Mi cuenta</div>
+                <a class="nav-link" href="#">
+                    <div class="sb-nav-link-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    Inicio
+                </a>
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                    <div class="sb-nav-link-icon">
+                        <i class="fas fa-columns"></i>
+                    </div>
+                    Perfil
+                    <div class="sb-sidenav-collapse-arrow">
+                        <i class="fas fa-angle-down"></i>
+                    </div>
+                </a>
+                <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                    <nav class="sb-sidenav-menu-nested nav">
+                        <a class="nav-link" [routerLink]="['/actualizar-info']">Actualizar Información</a><a class="nav-link" href="./SubirArchivos.html">Subir Archivos</a>
+                    </nav>
+                </div>
+                <div class="sb-sidenav-menu-heading">
+                    Mis Encuestas
+                </div>
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                    <div class="sb-nav-link-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    Encuestas
+                    <div class="sb-sidenav-collapse-arrow">
+                        <i class="fas fa-angle-down"></i>
+                    </div>
+                </a>
+                <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
+                    <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                        <a class="nav-link" href="#">Clima Laboral</a>
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">Encuesta 2
+                            <div class="sb-sidenav-collapse-arrow"></div>
+                        </a>
+                    </nav>
+                </div>
+                <div class="sb-sidenav-menu-heading">RH</div>
+                <a class="nav-link" href="#">
+                    <div class="sb-nav-link-icon">
+                        <i class="fas fa-chart-area"></i>
+                    </div>
+                    Recursos Humanos
+                </a>
+            </div>
+        </div>
+    </nav>
+</div>
