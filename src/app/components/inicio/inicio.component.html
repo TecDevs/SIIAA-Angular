@@ -1,86 +1,18 @@
 <div id="layoutSidenav">
-    <app-sidebar></app-sidebar>
+    <div id="layoutSidenav_nav">
+        <app-sidebar></app-sidebar>
+    </div>
+    <!-- subpaginas -->
     <div id="layoutSidenav_content">
-        <main>
-            <div class="col-12">
+        <div class="container-fluid">
+            <main>
                 <div class="row">
-
-                    <!-- CONTENIDO ENCUESTAS -->
-                    <div class="col contenido-principal mt-3">
-                        <div class="col-12">
-
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="carousel slide" id="principal-carousel" data-ride="carousel">
-                                        <ol class="carousel-indicators">
-                                            <li data-target="#principal-carousel" data-slid-to="0" class="active"></li>
-                                            <li data-target="#principal-carousel" data-slid-to="1"></li>
-                                            <li data-target="#principal-carousel" data-slid-to="2"></li>
-                                        </ol>
-
-                                        <div class="carousel-inner">
-                                            <div class="carousel-item active">
-                                                <div class="carousel-caption d-block">
-                                                    <h4>Titulo de la Imagen</h4>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, possimus!</p>
-                                                </div>
-                                                <img src="assets/img/imagenPortada1.png" class="w-100" alt="">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <div class="carousel-caption d-block">
-                                                    <h4>Titulo de la Imagen</h4>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, possimus!</p>
-
-                                                </div>
-                                                <img src="assets/img/imagenPortada22.png" class="w-100" alt="">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <div class="carousel-caption d-block">
-                                                    <h4>Titulo de la Imagen</h4>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, possimus!</p>
-                                                </div>
-                                                <img src="assets/img/imagenPortada3.png" class="w-100" alt="">
-                                            </div>
-                                        </div>
-
-                                        <a href="#principal-carousel" class="carousel-control-prev" data-slide="prev">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                            <span class="sr-only">Anterior</span>
-                                        </a>
-
-                                        <a href="#principal-carousel" class="carousel-control-next" data-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                            <span class="sr-only">Siguiente</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row mt-3">
-                                <div class="col-12">
-                                    <div class="carousel slide" id="principal-carousel" data-ride="carousel">
-                                        <div class="carousel-inner">
-                                            <div class="carousel-item active">
-
-                                                <div class="carousel-caption d-block">
-                                                    <h4>La encuesta</h4>
-                                                    <h1>Clima laboral</h1>
-                                                    <p>Ya esta disponible</p>
-                                                    <a class="btn btn-success" href="ClimaLaboral.html" type="submit">
-                                                        Haz click aquí para realizar la encuesta
-                                                </a>
-                                                </div>
-                                                <img src="assets/img/imagenPortada22.png" class="w-100" alt="">
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="col-9 contenido-principal mt-2">
+                        <router-outlet></router-outlet>
                     </div>
-                    <!-- BARRA LATERAL DERECHA -->
                     <div id="l" class="col-3 d-none d-lg-block">
                         <div class="root">
+                            <!-- BARRA LATERAL DERECHA -->
                             <!-- CALENDARIO -->
                             <app-calendario></app-calendario>
                             <!--                NOTAS-->
@@ -88,6 +20,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </main>
+            </main>
+        </div>
     </div>
+</div>

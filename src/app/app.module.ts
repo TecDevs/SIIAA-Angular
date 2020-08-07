@@ -25,6 +25,7 @@ import { DescargarResultadosComponent } from './components/recursos-humanos/repo
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { HomeComponent } from './components/shared/home/home.component';
 import { RouterModule } from '@angular/router';
+import { PrincipalComponent } from './components/inicio/principal/principal.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { RouterModule } from '@angular/router';
     DescargarResultadosComponent,
     FooterComponent,
     HomeComponent,
+    PrincipalComponent,
   ],
   imports: [
     BrowserModule,
