@@ -1,0 +1,11 @@
+/* estilos de encuestas */
+
+.pregunta {
+    font-size: 20px;
+    color: #099efc;
+}
+
+.center-encuestas {
+    min-height: 570px;
+    overflow-y: scroll;
+}
