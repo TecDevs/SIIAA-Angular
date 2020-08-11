@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RecursosHumanosService } from '../../../services/recursos-humanos.service';
 
 @Component({
   selector: 'app-registro-por-token',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistroPorTokenComponent implements OnInit {
 
-  constructor() { }
+  constructor( private recursosHumanosService: RecursosHumanosService ) { }
 
   ngOnInit(): void {
   }
-
+  generarToken( correo: string, area: string ){
+      area = area.toLowerCase();
+      this.recursosHumanosService.generarToken( correo, area )
+      .subscribe( (data) => {
+        console.log(data);
+      });
+  }
 }

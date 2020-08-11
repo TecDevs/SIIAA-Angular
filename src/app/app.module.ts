@@ -26,6 +26,8 @@ import { FooterComponent } from './components/shared/footer/footer.component';
 import { HomeComponent } from './components/shared/home/home.component';
 import { RouterModule } from '@angular/router';
 import { PrincipalComponent } from './components/inicio/principal/principal.component';
+import { RecursosHumanosComponent } from './components/recursos-humanos/recursos-humanos.component';
+
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -53,6 +55,7 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     HomeComponent,
     PrincipalComponent,
+    RecursosHumanosComponent
   ],
   imports: [
     BrowserModule,
