@@ -26,10 +26,12 @@
             </div>
         </form>
         <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="ejemplo de token: jdw23fd0l1" aria-label="" aria-describedby="basic-addon1" name="token-text">
+            <input type="text" class="form-control" aria-label="" aria-describedby="basic-addon1" value="{{token}}" name="token-text" readonly>
             <div class="input-group-prepend">
                 <button class="btn btn-success" data-target="#fm-modal" (click)="generarToken(correo.value, area[area.selectedIndex].text)">Generar/Enviar</button>
             </div>
+            <div class="w-100"></div>
+            <small id="emailHelp" class="form-text text-muted">ejemplo de token: jdw23fd0l1</small>
         </div>
     </div>
 </div>

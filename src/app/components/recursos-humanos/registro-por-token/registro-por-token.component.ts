@@ -7,16 +7,39 @@ import { RecursosHumanosService } from '../../../services/recursos-humanos.servi
   styleUrls: ['./registro-por-token.component.css']
 })
 export class RegistroPorTokenComponent implements OnInit {
-
-  constructor( private recursosHumanosService: RecursosHumanosService ) { }
+  token: string;
+  constructor(private recursosHumanosService: RecursosHumanosService) { }
 
   ngOnInit(): void {
   }
-  generarToken( correo: string, area: string ){
-      area = area.toLowerCase();
-      this.recursosHumanosService.generarToken( correo, area )
-      .subscribe( (data) => {
-        console.log(data);
-      });
+
+  generarToken(correo: string, area: string): any {
+    if (correo.length > 0 && area !== 'Seleccione un area...') {
+      if (this.validarCorreoElectronico(correo)) {
+        area = area.toLowerCase();
+        this.recursosHumanosService.generarToken(correo, area)
+          .subscribe((data) => {
+            if (data.statusText === 'OK') {
+              if (data.body.error) {
+                alert(data.body.error);
+              } else {
+                this.token = data.body.token;
+                alert(data.body.exito);
+              }
+            }
+          });
+      } else{
+        alert('Correo electronico invalido');
+      }
+    } else {
+      alert('rellene bien los datos');
+    }
+  }
+  validarCorreoElectronico(correo: string): boolean {
+    const regexCorreo = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (!regexCorreo.test(correo) || correo.length > 60) {
+      return false;
+    }
+    return true;
   }
 }

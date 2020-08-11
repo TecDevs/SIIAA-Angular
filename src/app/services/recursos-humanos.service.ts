@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
-import { map } from 'rxjs/operators';
+import { HttpClient, HttpHeaders, HttpRequest, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -11,13 +10,9 @@ export class RecursosHumanosService {
   constructor( private http: HttpClient ) { }
 
   getQuery( query: string, body: any ): Observable<any>{
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'content-type': 'application/x-www-form-urlencoded'
-      }),
-    };
     const url = `http://mante.hosting.acm.org/SIIAA_backend/${ query }`;
-    return this.http.post(url, body, httpOptions);
+    const request = new HttpRequest('POST', url, JSON.stringify(body));
+    return this.http.request(request);
   }
 
   generarToken( correo: string, area: string ): Observable<any>{
@@ -25,7 +20,7 @@ export class RecursosHumanosService {
       correo,
       area
     };
-    console.log(correo +'  /  '+ area);
+    console.log(body);
     return this.getQuery( 'negocios/php/RH/Registro_por_token/generar_token.php', body);
   }
 }
