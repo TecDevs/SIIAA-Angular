@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RecursosHumanosService } from '../../../services/recursos-humanos.service';
+import { RecursosHumanosService } from '../../../services/recursos-humanos/recursos-humanos.service';
 
 @Component({
   selector: 'app-registro-por-token',
