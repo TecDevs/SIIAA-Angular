@@ -13,6 +13,11 @@ import { PersonalComponent } from './components/recursos-humanos/personal/person
 import { RegistroEmpleadosComponent } from './components/recursos-humanos/registro-empleados/registro-empleados.component';
 import { RegistroPorTokenComponent } from './components/recursos-humanos/registro-por-token/registro-por-token.component';
 import { CumpleaniosComponent } from './components/recursos-humanos/cumpleanios/cumpleanios.component';
+import { ReportesComponent } from './components/recursos-humanos/reportes/reportes.component';
+import { PendientesComponent } from './components/recursos-humanos/reportes/pendientes/pendientes.component';
+import { GraficarResultadosComponent } from './components/recursos-humanos/reportes/graficar-resultados/graficar-resultados.component';
+import { DescargarResultadosComponent } from './components/recursos-humanos/reportes/descargar-resultados/descargar-resultados.component';
+import { AvancesComponent } from './components/recursos-humanos/reportes/avances/avances.component';
 
 export const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -33,6 +38,16 @@ export const routes: Routes = [
       {path: 'cumpleanios', component: CumpleaniosComponent },
       {path: 'registro-empleados', component: RegistroEmpleadosComponent},
       {path: 'registro-token', component: RegistroPorTokenComponent},
+      {path: 'reportes', component: ReportesComponent,
+        children: [
+          //RUTAS  HIJAS DE /RECURSOS HUMANOS/REPORTES
+          {path: 'avances', component: AvancesComponent},
+          {path: 'pendientes', component: PendientesComponent},
+          {path: 'graficar-resultados', component: GraficarResultadosComponent},
+          {path: 'descargar-resultados', component: DescargarResultadosComponent},
+          {path: '**', pathMatch: 'full', redirectTo: 'avances'},
+          {path: '', pathMatch: 'full', redirectTo: 'avances'}
+        ]},
       {path: '**', pathMatch: 'full', redirectTo: 'avisos'},
       {path: '', pathMatch: 'full', redirectTo: 'avisos'}
     ]

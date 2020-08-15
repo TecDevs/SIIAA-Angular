@@ -14,6 +14,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
   iniciarSesion(correo: string, contrasena: string): any {
+    this.router.navigateByUrl('inicio');
     correo = correo.trim();
     contrasena = contrasena.trim();
     if (correo.length > 0 && contrasena.length > 0) {

@@ -1,0 +1,16 @@
+<h2>Reportes</h2>
+<ul class="nav nav-tabs mb-2">
+    <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" [routerLink]="['avances']">Avances</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" [routerLink]="['pendientes']">Pendientes</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" [routerLink]="['graficar-resultados']">Graficar resultados</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" [routerLink]="['descargar-resultados']">Descargar archivo</a>
+    </li>
+</ul>
+<router-outlet></router-outlet>
