@@ -19,6 +19,7 @@ export class RegistroPorTokenComponent implements OnInit {
         area = area.toLowerCase();
         this.recursosHumanosService.generarToken(correo, area)
           .subscribe((data) => {
+            console.log(data);
             if (data.statusText === 'OK') {
               if (data.body.error) {
                 alert(data.body.error);
