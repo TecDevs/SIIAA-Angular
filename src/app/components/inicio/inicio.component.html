@@ -1,21 +1,25 @@
+<app-navbar></app-navbar>
 <div id="layoutSidenav">
     <div id="layoutSidenav_nav">
         <app-sidebar></app-sidebar>
     </div>
+    
     <!-- subpaginas -->
     <div id="layoutSidenav_content">
         <div class="container-fluid">
             <main>
                 <div class="row">
-                    <div class="col-9 contenido-principal mt-2">
+                    <!-- Contenido centro principal -->
+                    <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
                         <router-outlet></router-outlet>
                     </div>
-                    <div id="l" class="col-3 d-none d-lg-block">
+
+                    <div id="l" class="col-3 d-none d-sm-none d-md-none d-lg-block">
                         <div class="root">
-                            <!-- BARRA LATERAL DERECHA -->
-                            <!-- CALENDARIO -->
+                            <!-- barra lateral derecha -->
+                            <!-- calendario -->
                             <app-calendario></app-calendario>
-                            <!--                NOTAS-->
+                            <!--  notas-->
                             <app-notas></app-notas>
                         </div>
                     </div>
@@ -24,3 +28,10 @@
         </div>
     </div>
 </div>
+
+
+<!-- d-none : ocultar elemento
+     d-md-none : ocultar elemento cuando sea pantalla mediana
+     d-sm-none : ocultar elemento cuando sea pantalla pequeña
+     d-lg-block : mostrar elemento cuando sea pantalla larga
+-->

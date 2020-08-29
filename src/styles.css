@@ -5,72 +5,14 @@
     padding: 0;
     box-sizing: border-box;
     background-size: cover;
+    font-family: 'Poppins', Helvetica, sans-serif;
+    
 }
 
 body {
     font-family: 'open sans' sans-serif;
 }
 
-.titulo {
-    color: #4e4e4e;
-    font-size: 30px;
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.header-home {
-    width: 100%;
-    height: 550px;
-    background: #667db6;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #234bb1b9, #0082c8bd, #0082c8b7, #1747c0b4);
-    background: url('assets/img/imagenportada2.png');
-    background-size: cover;
-    background-attachment: fixed;
-    position: relative;
-}
-
-.header-home .textos-header {
-    display: flex;
-    height: 500px;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-}
-
-.textos-header h1 {
-    font-size: 35px;
-    color: #fff;
-}
-
-.textos-header h2 {
-    font-size: 32px;
-    font-weight: 300;
-    color: #fff;
-}
-
-.texto-contenido h3 {
-    font-size: 15px;
-    font-weight: 300;
-    color: #000;
-    align-content: center;
-}
-
-.wave {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-
-.contenedor-informacion {
-    padding: 5px 0;
-    width: 90%;
-    max-width: 650px;
-    margin: auto;
-    overflow: hidden;
-}
 
 .titulo {
     color: #4e4e4e;
@@ -88,12 +30,7 @@ body {
     }
 }
 
-footer {
-    color: white;
-    position: fixed;
-    bottom: 0px;
-    width: 100%;
-}
+
 
 .titulo-nombre {
     text-align: center;
@@ -131,53 +68,6 @@ footer {
 
 
 /*ESTILOS BARRA DERECHA NOTAS*/
-
-.contenedor-notas {
-    margin-top: 20px;
-    background: rgb(0 123 255);
-    color: #fff;
-    border-radius: 12px;
-}
-
-.contenedor-notas div {
-    background: rgb(0 123 255);
-    padding: 10px;
-}
-
-.textbox {
-    width: 100%;
-    overflow: hidden;
-    font-size: 20px;
-    border-bottom: 1px solid #4caf50;
-}
-
-.textbox i {
-    width: 26px;
-    float: left;
-    text-align: center;
-}
-
-.textbox input {
-    border: none;
-    outline: none;
-    background: none;
-    color: white;
-    font-size: 35px;
-    width: 100%;
-    float: left;
-    margin: 0 10px;
-    text-align: center;
-}
-
-.cabecera-modal {
-    margin-bottom: 10px;
-    color: #fff;
-}
-
-.cabecera-modal div {
-    background: url('assets/img/imagenportada.png') no-repeat;
-    padding: 20px;
-}
 
 .btn-RH {
     background-color: #099efc;
@@ -288,21 +178,7 @@ html {
 
 /*Globales*/
 
-.bg {
-    background: url('assets/img/imagenPortada2.png') no-repeat;
-    width: 100%;
-    height: 100vh;
-    background-size: 100%;
-}
 
-.form-container {
-    position: absolute;
-    top: 15vh;
-    background: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px 0px #000;
-}
 
 @media only screen and(max-width: 678px) {
     .bg {
