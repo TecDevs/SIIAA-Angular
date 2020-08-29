@@ -9,3 +9,8 @@
     min-height: 570px;
     overflow-y: scroll;
 }
+
+.btn-guardar {
+    position: relative;
+    left: 80%;
+}
