@@ -1,0 +1,49 @@
+
+*{
+    font-family: 'Poppins', Helvetica, sans-serif;
+}
+.contenedor-notas {
+    margin-top: 20px;
+    background: rgb(0 123 255);
+    color: #fff;
+    border-radius: 12px;
+}
+
+.contenedor-notas div {
+    background: rgb(0 123 255);
+    padding: 10px;
+}
+
+.textbox {
+    width: 70%;
+    overflow: hidden;
+    font-size: 15px;
+}
+
+.textbox i {
+    width: 26px;
+    float: left;
+    text-align: center;
+}
+
+.textbox input {
+    border: none;
+    outline: none;
+    background: none;
+    color: black;
+    font-size: 20px;
+    width: 100%;
+    float: left;
+    margin: 0 10px;
+    text-align: center;
+}
+
+
+.ilustracion-modal{
+    width: 400px;
+    height: 300px;
+}
+
+textarea{
+    height: 120px;
+}

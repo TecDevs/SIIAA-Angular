@@ -1,0 +1,29 @@
+.ilustracion-modal{
+    width: 270px;
+    height: 270px;
+}
+
+
+.textbox {
+    width: 100%;
+    overflow: hidden;
+    font-size: 15px;
+}
+
+.textbox i {
+    width: 26px;
+    float: left;
+    text-align: center;
+}
+
+.textbox input {
+    border: none;
+    outline: none;
+    background: none;
+    color: black;
+    font-size: 20px;
+    width: 100%;
+    float: left;
+    margin: 0 10px;
+    text-align: center;
+}
