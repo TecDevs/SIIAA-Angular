@@ -30,6 +30,7 @@ import { RecursosHumanosComponent } from './components/recursos-humanos/recursos
 
 import { HttpClientModule } from '@angular/common/http';
 import { ReportesComponent } from './components/recursos-humanos/reportes/reportes.component';
+import { NavbarInicioComponent } from './components/shared/navbar-inicio/navbar-inicio.component'
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { ReportesComponent } from './components/recursos-humanos/reportes/report
     HomeComponent,
     PrincipalComponent,
     RecursosHumanosComponent,
-    ReportesComponent
+    ReportesComponent,
+    NavbarInicioComponent
   ],
   imports: [
     BrowserModule,
