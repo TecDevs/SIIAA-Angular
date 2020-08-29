@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { EncuestasService } from '../../../services/shared/encuestas/encuestas.service';
 
 @Component({
   selector: 'app-clima-laboral',
@@ -7,19 +8,21 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./clima-laboral.component.css']
 })
 export class ClimaLaboralComponent implements OnInit {
-  
-  encuesta: any = {};
 
+  encuesta: any = {};
   numbloque: number;
-  constructor( private http: HttpClient ) {
+  constructor( private http: HttpClient, private encuestasService: EncuestasService ) {
     this.numbloque = 0;
     this.http.get('../../../../assets/encuestas/encuesta.json')
     .subscribe( data => {
       this.encuesta = data;
       console.log(data);
     });
-   }
+  }
   ngOnInit(): void { }
+  guardarResultados(bloque: string, idArea: number, valorRespuesta: number, pregunta: string){
+    this.encuestasService.saveReplys(bloque, idArea, valorRespuesta, pregunta);
+  }
   activarBloque1(): any{
     this.numbloque = 0;
   }
