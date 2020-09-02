@@ -424,6 +424,7 @@ html {
     flex-shrink: 0;
 }
 
+/* dark */
 .sb-sidenav-dark {
     background-color: #212529;
     color: rgba(255, 255, 255, 0.5);
@@ -483,7 +484,10 @@ html {
 }
 
 .sb-sidenav-light .sb-sidenav-menu .nav-link:hover {
-    color: #007bff;
+    
+color: #fff;
+background: #007bffad;
+transition-duration: 0.25s;
 }
 
 .sb-sidenav-light .sb-sidenav-menu .nav-link.active {
