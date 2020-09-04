@@ -1,16 +1,17 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpRequest, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { AppConfig } from '../../config/app.config';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RecursosHumanosService {
 
-  constructor( private http: HttpClient ) { }
+  constructor( private http: HttpClient, private appConfig: AppConfig ) { }
 
   getQuery( query: string, body: any ): Observable<any>{
-    const url = `http://mante.hosting.acm.org/SIIAA-API/public/${ query }`;
+    const url = `${this.appConfig.URL}${ query }`;
     const request = new HttpRequest('POST', url, body);
     return this.http.request(request);
   }
