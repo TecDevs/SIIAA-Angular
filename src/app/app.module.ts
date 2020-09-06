@@ -65,7 +65,7 @@ import { ConfiguracionComponent } from './components/shared/configuracion/config
     RecursosHumanosComponent,
     ReportesComponent,
     NavbarInicioComponent,
-    ConfiguracionComponent
+    ConfiguracionComponent,
     GraficarAreasComponent,
     GraficarTotalComponent
   ],
