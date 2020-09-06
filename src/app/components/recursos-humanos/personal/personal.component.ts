@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PersonalService } from '../../../services/recursos-humanos/personal.service';
+import { Personal } from '../../../models/personal.model';
 
 @Component({
   selector: 'app-personal',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonalComponent implements OnInit {
 
-  constructor() { }
+  personal: Personal[];
+  constructor( private personalService: PersonalService ) { 
+    this.personal = new Array<Personal>();
+  }
 
   ngOnInit(): void {
+    this.personalService.getPersonal()
+          .subscribe( data => {
+            console.log(data);
+            this.personal = data;
+        });
   }
 
 }

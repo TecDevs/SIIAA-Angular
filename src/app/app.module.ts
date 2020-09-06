@@ -34,6 +34,7 @@ import { NavbarInicioComponent } from './components/shared/navbar-inicio/navbar-
 import { ChartsModule } from 'ng2-charts';
 import { GraficarAreasComponent } from './components/recursos-humanos/reportes/avances/graficar-areas/graficar-areas.component';
 import { GraficarTotalComponent } from './components/recursos-humanos/reportes/avances/graficar-total/graficar-total.component';
+import { AppConfig } from './config/app.config';
 
 @NgModule({
   declarations: [
@@ -72,7 +73,9 @@ import { GraficarTotalComponent } from './components/recursos-humanos/reportes/a
     HttpClientModule,
     ChartsModule
   ],
-  providers: [],
+  providers: [
+    AppConfig
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
