@@ -32,6 +32,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReportesComponent } from './components/recursos-humanos/reportes/reportes.component';
 import { NavbarInicioComponent } from './components/shared/navbar-inicio/navbar-inicio.component'
 import { AppConfig } from './config/app.config';
+import { ConfiguracionComponent } from './components/shared/configuracion/configuracion/configuracion.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import { AppConfig } from './config/app.config';
     PrincipalComponent,
     RecursosHumanosComponent,
     ReportesComponent,
-    NavbarInicioComponent
+    NavbarInicioComponent,
+    ConfiguracionComponent
   ],
   imports: [
     BrowserModule,
