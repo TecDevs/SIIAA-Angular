@@ -14,7 +14,7 @@ export const RECURSOS_HUMANOS_ROUTES: Routes = [
     {path: 'registro-empleados', component: RegistroEmpleadosComponent},
     {path: 'registro-token', component: RegistroPorTokenComponent},
     {path: 'reportes', component: ReportesComponent,
-        children: REPORTES_ROUTES
+        children: REPORTES_ROUTES,
     },
     {path: '**', pathMatch: 'full', redirectTo: 'avisos'},
     {path: '', pathMatch: 'full', redirectTo: 'avisos'}

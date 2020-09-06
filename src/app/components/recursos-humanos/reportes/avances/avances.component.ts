@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ChartOptions, ChartType, ChartDataSets } from 'chart.js';
+import { Label, Color } from 'ng2-charts';
 
 @Component({
   selector: 'app-avances',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AvancesComponent implements OnInit {
 
+
   constructor() { }
 
+
+
   ngOnInit(): void {
+    
   }
 
 }
