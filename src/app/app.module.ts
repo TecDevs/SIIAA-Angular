@@ -30,7 +30,10 @@ import { RecursosHumanosComponent } from './components/recursos-humanos/recursos
 
 import { HttpClientModule } from '@angular/common/http';
 import { ReportesComponent } from './components/recursos-humanos/reportes/reportes.component';
-import { NavbarInicioComponent } from './components/shared/navbar-inicio/navbar-inicio.component'
+import { NavbarInicioComponent } from './components/shared/navbar-inicio/navbar-inicio.component';
+import { ChartsModule } from 'ng2-charts';
+import { GraficarAreasComponent } from './components/recursos-humanos/reportes/avances/graficar-areas/graficar-areas.component';
+import { GraficarTotalComponent } from './components/recursos-humanos/reportes/avances/graficar-total/graficar-total.component';
 
 @NgModule({
   declarations: [
@@ -59,12 +62,15 @@ import { NavbarInicioComponent } from './components/shared/navbar-inicio/navbar-
     PrincipalComponent,
     RecursosHumanosComponent,
     ReportesComponent,
-    NavbarInicioComponent
+    NavbarInicioComponent,
+    GraficarAreasComponent,
+    GraficarTotalComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot( routes, { useHash: true } ),
     HttpClientModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
