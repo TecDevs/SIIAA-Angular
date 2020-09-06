@@ -1,0 +1,34 @@
+<div class="d-flex">
+    <div class="ml-auto p-2">
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Encuesta
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Clima laboral</a>
+              <a class="dropdown-item" href="#">Encuesta 2</a>
+            </div>
+          </div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <div class="d-flex">
+            <div class="p-2">
+                <h4>Total</h4>
+            </div>
+            <div class="ml-auto p-2"> <button class="btn btn-outline-primary fas fa-download"></button> </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <div style="display: block;">
+            <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+                [plugins]="barChartPlugins" [legend]="barChartLegend" [colors]="barChartColors"
+                [chartType]="barChartType">
+            </canvas>
+        </div>
+    </div>
+</div>
+
+<br>

@@ -1,4 +1,5 @@
 .ilustracion-modal{
+    margin-top: 20px;
     width: 270px;
     height: 270px;
 }
@@ -26,4 +27,19 @@
     float: left;
     margin: 0 10px;
     text-align: center;
+}
+
+.card-avisos-cumpleaños{
+    background-image: url(/../assets/img/imagenPortada1.png);
+    color: #fff;
+}
+
+.card-avisos-eventos{
+    background-image: url(/../assets/img/imagenPortada3.png);
+    color: #fff;
+}
+
+.card-avisos-encuestas{
+    background-image: url(/../assets/img/imagenPortada22.png);
+    color: #fff;
 }
