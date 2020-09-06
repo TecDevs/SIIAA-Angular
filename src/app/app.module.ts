@@ -35,6 +35,7 @@ import { ChartsModule } from 'ng2-charts';
 import { GraficarAreasComponent } from './components/recursos-humanos/reportes/graficar-resultados/graficar-areas/graficar-areas.component';
 import { GraficarTotalComponent } from './components/recursos-humanos/reportes/graficar-resultados/graficar-total/graficar-total.component';
 import { AppConfig } from './config/app.config';
+import { ConfiguracionComponent } from './components/shared/configuracion/configuracion/configuracion.component';
 
 @NgModule({
   declarations: [
@@ -64,6 +65,7 @@ import { AppConfig } from './config/app.config';
     RecursosHumanosComponent,
     ReportesComponent,
     NavbarInicioComponent,
+    ConfiguracionComponent,
     GraficarAreasComponent,
     GraficarTotalComponent
   ],
