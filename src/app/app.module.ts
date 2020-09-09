@@ -31,8 +31,12 @@ import { RecursosHumanosComponent } from './components/recursos-humanos/recursos
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ReportesComponent } from './components/recursos-humanos/reportes/reportes.component';
-import { NavbarInicioComponent } from './components/shared/navbar-inicio/navbar-inicio.component'
+import { NavbarInicioComponent } from './components/shared/navbar-inicio/navbar-inicio.component';
+import { ChartsModule } from 'ng2-charts';
+import { GraficarAreasComponent } from './components/recursos-humanos/reportes/graficar-resultados/graficar-areas/graficar-areas.component';
+import { GraficarTotalComponent } from './components/recursos-humanos/reportes/graficar-resultados/graficar-total/graficar-total.component';
 import { AppConfig } from './config/app.config';
+import { ConfiguracionComponent } from './components/shared/configuracion/configuracion/configuracion.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +65,10 @@ import { AppConfig } from './config/app.config';
     PrincipalComponent,
     RecursosHumanosComponent,
     ReportesComponent,
-    NavbarInicioComponent
+    NavbarInicioComponent,
+    ConfiguracionComponent,
+    GraficarAreasComponent,
+    GraficarTotalComponent
   ],
   imports: [
     BrowserModule,
@@ -69,7 +76,7 @@ import { AppConfig } from './config/app.config';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    
+    ChartsModule
   ],
   providers: [
     AppConfig

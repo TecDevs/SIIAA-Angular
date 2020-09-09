@@ -1,13 +1,13 @@
 <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-        <a class="navbar-brand"> <span><img src="assets/img/logotec.png" height="30" width="30"/></span>Tecnológico Nacional de México</a>
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                    <a class="dropdown-item" href="#">Configuración</a>
-                    <div class="dropdown-divider"></div>
-                    <button id="btn-cerrar-sesion" class="dropdown-item">Cerrar Sesión</button>
-                </div>
-            </li>
-        </ul>
+    <a class="navbar-brand"> <span><img src="assets/img/logotec.png" height="30" width="30"/></span>Tecnológico Nacional de México</a>
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                <a class="dropdown-item" [routerLink]="['configuracion']">Configuración</a>
+                <div class="dropdown-divider"></div>
+                <button id="btn-cerrar-sesion" class="dropdown-item">Cerrar Sesión</button>
+            </div>
+        </li>
+    </ul>
 </nav>
