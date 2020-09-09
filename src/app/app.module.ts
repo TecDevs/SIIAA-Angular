@@ -29,6 +29,7 @@ import { PrincipalComponent } from './components/inicio/principal/principal.comp
 import { RecursosHumanosComponent } from './components/recursos-humanos/recursos-humanos.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ReportesComponent } from './components/recursos-humanos/reportes/reportes.component';
 import { NavbarInicioComponent } from './components/shared/navbar-inicio/navbar-inicio.component';
 import { ChartsModule } from 'ng2-charts';
@@ -72,6 +73,8 @@ import { ConfiguracionComponent } from './components/shared/configuracion/config
   imports: [
     BrowserModule,
     RouterModule.forRoot( routes, { useHash: true } ),
+    FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     ChartsModule
   ],
