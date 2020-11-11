@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginService } from '../../../services/shared/login/login.service';
+import swal from 'sweetalert2'
 
 @Component({
   selector: 'app-login',
@@ -14,32 +15,28 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
   iniciarSesion(correo: string, contrasena: string): any {
-    this.router.navigateByUrl('inicio');
     correo = correo.trim();
     contrasena = contrasena.trim();
     if (correo.length > 0 && contrasena.length > 0) {
       if (this.validarCorreoElectronico(correo)) {
-        this.loginService.iniciarSesion(correo, contrasena)
-          .subscribe(data => {
-            console.log(data);
-            if (data.statusText === 'OK') {
-              if ( data.body.error ){
-                switch (data.body.error) {
-                  case 'Password':
-                    alert('Contraseña incorrecta');
-                    break;
-                  case 'Account':
-                    alert('No se encontro tu cuneta');
-                    break;
-                  default:
-                    break;
-                }
-              } else {
-                this.guardarSesion(data.body);
-                console.log(data.body);
-                this.router.navigateByUrl('inicio');
-              }
+        this.loginService.iniciarSesion(correo, contrasena).subscribe(
+          data => {
+            if (data === 'Contrasena incorrecta') {
+              swal.fire({
+                title: 'Contraseña incorrecta',
+                icon: 'error'
+              });
+            } else if (data === 'No existe') {
+              swal.fire({
+                title: 'Este usuario no se encuentra registrado',
+                icon: 'error'
+              });
+            } else {
+              this.router.navigateByUrl('inicio');
             }
+          },
+          err => {
+            console.log(err);
           });
       } else {
         alert('Ingrese un correo valido');

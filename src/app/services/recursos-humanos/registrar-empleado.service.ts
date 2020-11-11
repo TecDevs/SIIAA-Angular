@@ -12,6 +12,6 @@ import { RegistroEmpleados } from '../../models/registroEmpleado.model';
     constructor( private http: HttpClient, private appConfig: AppConfig ) { }
   
     putEmpleados(body: any): Observable<any> {
-      return this.http.post(this.appConfig.URL + 'api/rh/user/new', body);
+      return this.http.put(this.appConfig.URL + 'api/login/token-register', body);
     }
   }
