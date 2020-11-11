@@ -17,49 +17,49 @@
                         </div>
                         <hr>
                         <div class="collapse show" aria-labelledby="headingOne" data-parent="#accordion" id="collapseOne">
-                            <form class="form-group row justify-content-center mt-2">
+                            <form class="form-group row justify-content-center mt-2" [formGroup]="formRegistro">
                                 <div class="col-md-4 col-sm-12">
                                     <label>Nombre:<span class="spa">*</span></label>
-                                    <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre">
+                                    <input type="text" class="form-control" id="nombre" formControlName="nombre" placeholder="Ingrese su nombre">
                                     <label class="mt-3">Apellido paterno:<span class="spa">*</span></label>
-                                    <input type="text" class="form-control mt-" id="apellidopaterno" placeholder="Ingrese su apellido paterno">
+                                    <input type="text" class="form-control mt-" id="apellidopaterno" formControlName="ap_paterno" placeholder="Ingrese su apellido paterno">
                                     <label class="mt-3">Apellido materno:<span class="spa">*</span></label>
-                                    <input type="text" class="form-control" id="apellidomaterno" placeholder="Ingrese su apellido materno">
+                                    <input type="text" class="form-control" id="apellidomaterno" formControlName="ap_materno" placeholder="Ingrese su apellido materno">
                                     <label class="mt-3">Fecha de nacimiento:<span class="spa">*</span></label>
-                                    <input type="date" class="form-control" id="fechanacimiento" placeholder="Ingrese la fecha de nacimiento">
+                                    <input type="date" class="form-control" id="fechanacimiento" formControlName="fecha_nacimiento" placeholder="Ingrese la fecha de nacimiento">
                                     <label class="mt-3">Numero de celular:<span class="spa">*</span></label>
-                                    <input type="text" class="form-control" id="celular" placeholder="Ingrese su contraseña">
+                                    <input type="text" class="form-control" id="celular" formControlName="numero" placeholder="Ingrese su contraseña">
                                     <label class="mt-3">Código Postal:<span class="spa">*</span></label>
-                                    <input type="text" class="form-control" id="cp" placeholder="Ingrese su contraseña">
+                                    <input type="text" class="form-control" id="cp" formControlName="cp" placeholder="Ingrese su cp">
                                     <label class="mt-3">Ciudad:<span class="spa">*</span></label>
-                                    <input type="text" class="form-control" id="ciudad" placeholder="Ingrese su contraseña">
+                                    <input type="text" class="form-control" id="ciudad" formControlName="ciudad" placeholder="Ingrese su ciudad">
                                 </div>
                                 <div class="col-md-4 col-sm-12">
                                     <label>Estado:<span class="spa">*</span></label>
-                                    <input type="text" class="form-control" id="estado" placeholder="Ingrese el estado">
+                                    <input type="text" class="form-control" id="estado" formControlName="estado" placeholder="Ingrese el estado">
                                     <label class="mt-3">Municipio:<span class="spa">*</span></label>
-                                    <input type="text" class="form-control" id="municipio" placeholder="Ingrese el municipio">
+                                    <input type="text" class="form-control" id="municipio" formControlName="municipio" placeholder="Ingrese el municipio">
                                     <label class="mt-3">Colonia:<span class="spa">*</span></label>
-                                    <input type="text" class="form-control" id="colonia" placeholder="Ingrese su colonia">
+                                    <input type="text" class="form-control" id="colonia" formControlName="colonia" placeholder="Ingrese su colonia">
                                     <label class="mt-3">Calle:<span class="spa">*</span></label>
-                                    <input type="text" class="form-control" id="calle" placeholder="Ingrese la calle">
+                                    <input type="text" class="form-control" id="calle" formControlName="calle" placeholder="Ingrese la calle">
                                     <label class="mt-3">Nº Interior:</label>
-                                    <input type="text" class="form-control" id="ninterior" placeholder="Ingrese el numero interior">
+                                    <input type="text" class="form-control" id="ninterior" formControlName="numInt" placeholder="Ingrese el numero interior">
                                     <label class="mt-3">Nº Exterior:<span class="spa">*</span></label>
-                                    <input type="text" class="form-control" id="nexterior" placeholder="Ingrese su numero exterior">
+                                    <input type="text" class="form-control" id="nexterior" formControlName="numExt" placeholder="Ingrese su numero exterior">
                                     <label class="mt-3">Correo:<span class="spa">*</span></label>
-                                    <input type="email" class="form-control" id="correo" placeholder="Ingrese su correo">
+                                    <input type="email" class="form-control" id="correo" formControlName="correo" placeholder="Ingrese su correo">
                                 </div>
                             </form>
-                            <form class="form-group row justify-content-center mt-3">
+                            <form class="form-group row justify-content-center mt-3" [formGroup]="formRegistro">
                                 <div class="col-md-4 col-sm-12">
                                     <label>Contraseña:<span class="spa">*</span></label>
-                                    <input type="password" class="form-control" id="contrasena" placeholder="Ingrese una contraseña">
+                                    <input type="password" class="form-control" id="contrasena" formControlName="contrasena" placeholder="Ingrese una contraseña">
                                 </div>
                                 <div class="col-md-4 col-sm-12">
                                     <br class="d-lg-none d-md-none d-sm-block d-xs-block">
                                     <label>Confirmar contraseña:<span class="spa">*</span></label>
-                                    <input type="password" class="form-control" id="confirmarcontrasena" placeholder="confirme su contraseña">
+                                    <input type="password" class="form-control" id="confirmarcontrasena" formControlName="confirmar" placeholder="confirme su contraseña">
                                 </div>
                             </form>
                         </div>
@@ -71,7 +71,7 @@
                         <label> <span class="spa">*</span>Campos obligatorios</label>
                     </div>
                     <div class="row flex-row-reverse mr-5">
-                        <button class="btn btn-success" data-target="#fm-modal" id="btn-registrarse">Registrarse</button>
+                        <button class="btn btn-success" data-target="#fm-modal" id="btn-registrarse" (click)="registro()" [disabled]="!formRegistro.valid">Registrarse</button>
                     </div>
                 </div>
             </div>
