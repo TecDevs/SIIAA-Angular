@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import swal from 'sweetalert2';
 import { Registro } from 'src/app/models/registro.model';
-import { RegistroService } from '../../../services/shared/registro/registro.service';
+import { RegistrarEmpleadoService } from '../../../services/recursos-humanos/registrar-empleado.service';
 
 
 @Component({
@@ -17,26 +17,26 @@ export class RegistroComponent implements OnInit {
 
   constructor(
     public formBuilder: FormBuilder,
-    public registroService: RegistroService,
+    public registroService: RegistrarEmpleadoService,
   ) {
 
     this.formRegistro = formBuilder.group({
-      nombre: ['', [Validators.required]],
-      ap_paterno: ['', [Validators.required]],
-      ap_materno: ['', [Validators.required]],
-      fecha_nacimiento: ['', [Validators.required]],
-      numero: ['', [Validators.required]],
-      cp: ['', [Validators.required]],
+      nombres: ['', [Validators.required]],
+      apellido_paterno: ['', [Validators.required]],
+      apellido_materno: ['', [Validators.required]],
+      fecha_de_nacimiento: ['', [Validators.required]],
+      numero_celular: ['', [Validators.required]],
+      codigo_postal: ['', [Validators.required]],
       ciudad: ['', [Validators.required]],
       estado: ['', [Validators.required]],
       municipio: ['', [Validators.required]],
       colonia: ['', [Validators.required]],
       calle: ['', [Validators.required]],
-      numInt: [''],
-      numExt: ['', [Validators.required]],
-      correo: ['', [Validators.required]],
+      num_int: [''],
+      num_ext: ['', [Validators.required]],
+      correo_electronico: ['', [Validators.required]],
       contrasena: ['', [Validators.required]],
-      confirmar: ['', [Validators.required]],
+      token: ['']
     });
 
   }
@@ -45,10 +45,15 @@ export class RegistroComponent implements OnInit {
   }
 
   registro() {
-    if (this.formRegistro.value.contrasena === this.formRegistro.value.confirmar  && this.validarCorreoElectronico(this.formRegistro.value.correo)) {
-
-      this.registroService.registro(this.formRegistro.value).subscribe(
+    if (this.validarCorreoElectronico(this.formRegistro.value.correo_electronico)) {
+      //console.log(this.formRegistro.value.fecha_de_nacimiento);
+      this.formRegistro.value.fecha_de_nacimiento = this.formRegistro.value.fecha_de_nacimiento.replace('/', '-');
+      //console.log(this.formRegistro.value.fecha_de_nacimiento);
+      
+      this.registroService.putEmpleados(this.formRegistro.value).subscribe(
         data => {
+          console.log(data);
+          
           swal.fire({
             icon: 'success',
             title: 'Exito',
@@ -59,7 +64,7 @@ export class RegistroComponent implements OnInit {
           swal.fire({
             icon: 'error',
             title: 'Error',
-            text: 'Hubo un error al registrar el juez'
+            text: 'Hubo un error al registrar'
           });
           console.log(err);
         }
