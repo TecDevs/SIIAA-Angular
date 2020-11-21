@@ -6,7 +6,7 @@
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
                 <a class="dropdown-item" [routerLink]="['configuracion']">Configuración</a>
                 <div class="dropdown-divider"></div>
-                <button id="btn-cerrar-sesion" class="dropdown-item">Cerrar Sesión</button>
+                <button id="btn-cerrar-sesion" class="dropdown-item" (click)="cerrar()">Cerrar Sesión</button>
             </div>
         </li>
     </ul>

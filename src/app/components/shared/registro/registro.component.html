@@ -91,27 +91,27 @@
                         </div>
                         <hr>
                         <div class="collapse " aria-labelledby="headingDos" data-parent="#accordion" id="collapseDos">
-                            <form class="form-group row justify-content-center mt-2">
+                            <form class="form-group row justify-content-center mt-2" [formGroup]="formRegistroAlumnos">
                                 <div class="col-md-4 col-sm-12">
                                     <label>Nombre:<span class="spa">*</span></label>
-                                    <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre">
+                                    <input type="text" formControlName="nombres" class="form-control" id="nombre" placeholder="Ingrese su nombre">
                                     <label class="mt-3">Apellido paterno:<span class="spa">*</span></label>
-                                    <input type="text" class="form-control mt-" id="apellidopaterno" placeholder="Ingrese su apellido paterno">
+                                    <input type="text" formControlName="apellido_paterno" class="form-control mt-" id="apellidopaterno" placeholder="Ingrese su apellido paterno">
                                     <label class="mt-3">Apellido materno:<span class="spa">*</span></label>
-                                    <input type="text" class="form-control" id="apellidomaterno" placeholder="Ingrese su apellido materno">
+                                    <input type="text" formControlName="apellido_materno" class="form-control" id="apellidomaterno" placeholder="Ingrese su apellido materno">
                                     <label class="mt-3">Correo:<span class="spa">*</span></label>
-                                    <input type="email" class="form-control" id="correo" placeholder="Correo institucional">
+                                    <input type="email" formControlName="correo" class="form-control" id="correo" placeholder="Correo institucional">
                                     <label class="mt-3">NSS:<span class="spa">*</span></label>
-                                    <input type="number" class="form-control" id="nss" placeholder="Ingrese su NSS">
+                                    <input type="number" formControlName="nss" class="form-control" id="nss" placeholder="Ingrese su NSS">
                                 </div>
                                 <div class="col-md-4 col-sm-12">
                                     <label>Matricula:<span class="spa">*</span></label>
-                                    <input type="text" class="form-control" id="matricula" placeholder="Ingrese su matricula">
+                                    <input type="text" formControlName="matricula" class="form-control" id="matricula" placeholder="Ingrese su matricula">
                                     <div class="input-group mt-5">
                                         <div class="input-group-prepend">
                                             <label class="input-group-text" for="inputGroupSelect01">Tipo de sangre:<span class="spa">*</span></label>
                                         </div>
-                                        <select class="custom-select" id="inputGroupSelect01">
+                                        <select formControlName="t_sangre" class="custom-select" id="inputGroupSelect01">
                                           <option selected>Elige una...</option>
                                           <option value="1">O Negativo</option>
                                           <option value="2">O Positivo</option>
@@ -127,7 +127,7 @@
                                         <div class="input-group-prepend">
                                             <label class="input-group-text" for="inputGroupSelect01">Carrera:<span class="spa">*</span></label>
                                         </div>
-                                        <select class="form-control custom-select" id="inputGroupSelect01">
+                                        <select formControlName="carrera" class="form-control custom-select" id="inputGroupSelect01">
                                           <option selected>Elige una...</option>
                                           <option value="1">IGE</option>
                                           <option value="2">ISC</option>
@@ -137,67 +137,67 @@
                                         </select>
                                     </div>
                                     <label class="mt-3">Especialidad:<span class="spa">*</span></label>
-                                    <input type="text" class="form-control" id="especialidad" placeholder="Ingrese su especialidad">
+                                    <input type="text" formControlName="especialidad" class="form-control" id="especialidad" placeholder="Ingrese su especialidad">
                                     <label class="mt-3">Tutor:</label>
-                                    <input type="text" class="form-control" id="tutor" placeholder="Ingrese el nombre del tutor">
+                                    <input type="text" formControlName="tutor" class="form-control" id="tutor" placeholder="Ingrese el nombre del tutor">
                                 </div>
                             </form>
-                            <form class="form-group row justify-content-center mt-3">
+                            <form class="form-group row justify-content-center mt-3" [formGroup]="formRegistroAlumnos">
                                 <div class="col-md-4 col-sm-12">
                                     <label>Contraseña:<span class="spa">*</span></label>
-                                    <input type="password" class="form-control" id="contrasena" placeholder="Ingrese una contraseña">
+                                    <input type="password" formControlName="contrasena" class="form-control" id="contrasena" placeholder="Ingrese una contraseña">
                                 </div>
                                 <div class="col-md-4 col-sm-12">
                                     <br class="d-lg-none d-md-none d-sm-block d-xs-block">
                                     <label>Confirmar contraseña:<span class="spa">*</span></label>
-                                    <input type="password" class="form-control" id="confirmarcontrasena" placeholder="confirme su contraseña">
+                                    <input type="password" formControlName="c_contrasena" class="form-control" id="confirmarcontrasena" placeholder="confirme su contraseña">
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
                 <br>
-                <div class="row mb-4">
-                    <div class="col">
-                        <label> <span class="spa">*</span>Campos obligatorios</label>
+                <div class=" row mb-4 ">
+                    <div class="col ">
+                        <label> <span class="spa ">*</span>Campos obligatorios</label>
                     </div>
-                    <div class="row flex-row-reverse mr-5">
-                        <button class="btn btn-success" data-target="#fm-modal" id="btn-registrarse">Registrarse</button>
+                    <div class="row flex-row-reverse mr-5 ">
+                        <button class="btn btn-success " data-target="#fm-modal " id="btn-registrarse " (click)="registroAlumnos() ">Registrarse</button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="modal fade" id="fm-modal2" tabindex="-1" role="dialog" aria-labelledby="fm-modal" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h2 class="modal-title" id="">Ingresar código</h2>
-                        <button class="close" data-dismiss="modal" aria-label="Cerrar">
-                                <span aria-hidden="true">&times;</span>
+        <div class="modal fade " id="fm-modal2 " tabindex="-1 " role="dialog " aria-labelledby="fm-modal " aria-hidden="true ">
+            <div class="modal-dialog ">
+                <div class="modal-content ">
+                    <div class="modal-header ">
+                        <h2 class="modal-title " id=" ">Ingresar código</h2>
+                        <button class="close " data-dismiss="modal " aria-label="Cerrar ">
+                                <span aria-hidden="true ">&times;</span>
                             </button>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body ">
                         <h5>Para registrarte ingresa el código</h5>
-                        <form action="" [formGroup]="formRegistro">
-                            <div class="form-group">
-                                <label for="correo:">Código:</label>
-                                <input type="text" class="form-control" formControlName="token" id="token" placeholder="Ingrese su código">
-                                <small id="código" class="form-text text-muted">Ejemplo del código: R4dwfeE6.</small>
+                        <form action=" " [formGroup]="formRegistro ">
+                            <div class="form-group ">
+                                <label for="correo: ">Código:</label>
+                                <input type="text " class="form-control " formControlName="token " id="token " placeholder="Ingrese su código ">
+                                <small id="código " class="form-text text-muted ">Ejemplo del código: R4dwfeE6.</small>
                             </div>
                         </form>
                     </div>
-                    <div class="modal-footer">
-                        <button class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                        <button class="btn btn-primary" id="btn-confirmar" (click)="registro()">Confirmar</button>
+                    <div class="modal-footer ">
+                        <button class="btn btn-secondary " data-dismiss="modal ">Cancelar</button>
+                        <button class="btn btn-primary " id="btn-confirmar " (click)="registro() ">Confirmar</button>
                     </div>
                 </div>
             </div>
         </div>
         <!--modal carga-->
-        <div class="modal" id="fn-modal" tabindex="-1" role="dialog" aria-labelledby="fn-modal" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
+        <div class="modal " id="fn-modal " tabindex="-1 " role="dialog " aria-labelledby="fn-modal " aria-hidden="true ">
+            <div class="modal-dialog modal-dialog-centered ">
                 <div class="modal-content ">
-                    <div class="pre-loader">
+                    <div class="pre-loader ">
                         <span></span>
                         <span></span>
                         <span></span>

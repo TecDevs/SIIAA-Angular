@@ -13,6 +13,7 @@ import { RegistrarEmpleadoService } from '../../../services/recursos-humanos/reg
 export class RegistroComponent implements OnInit {
 
   public formRegistro: FormGroup;
+  public formRegistroAlumnos: FormGroup;
   registroGeneral: Registro[];
 
   constructor(
@@ -37,6 +38,21 @@ export class RegistroComponent implements OnInit {
       correo_electronico: ['', [Validators.required]],
       contrasena: ['', [Validators.required]],
       token: ['']
+    });
+
+    this.formRegistroAlumnos = formBuilder.group({
+      nombres: ['', [Validators.required]],
+      apellido_paterno: ['', [Validators.required]],
+      apellido_materno: ['', [Validators.required]],
+      correo: ['', [Validators.required]],
+      nss: ['', [Validators.required]],
+      matricula: ['', [Validators.required]],
+      t_sangre: ['', [Validators.required]],
+      carrera: ['', [Validators.required]],
+      especialidad: ['', [Validators.required]],
+      tutor: ['', [Validators.required]],
+      contrasena: ['', [Validators.required]],
+      c_contrasena: ['', [Validators.required]]
     });
 
   }
@@ -75,6 +91,19 @@ export class RegistroComponent implements OnInit {
       });
     }
 
+  }
+
+  registroAlumnos() {
+    if (this.formRegistroAlumnos.value.contrasena === this.formRegistroAlumnos.value.c_contrasena) {
+      if (this.validarCorreoElectronico(this.formRegistroAlumnos.value.correo)) {
+        console.log('exito');
+      }
+    } else {
+      swal.fire({
+        icon: 'warning',
+        title: 'Contrasena incorrecta'
+      });
+    }
   }
 
   validarCorreoElectronico(correo: string): boolean {
