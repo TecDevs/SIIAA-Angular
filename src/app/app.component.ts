@@ -12,6 +12,7 @@ export class AppComponent implements OnInit {
 
 
   constructor(private router: Router) {}
+
   ngOnInit(): void {
   if (localStorage.getItem('info-log')) {
     this.login = true;
@@ -20,7 +21,9 @@ export class AppComponent implements OnInit {
     this.router.navigateByUrl('/home');
   }
   if (!this.login) {
-    this.router.navigateByUrl('/login');
+    // this.router.navigateByUrl('/login'); 
+    this.router.navigateByUrl('/inicio');
   }
   }
+  
 }

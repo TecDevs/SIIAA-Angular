@@ -37,6 +37,9 @@ import { GraficarAreasComponent } from './components/recursos-humanos/reportes/g
 import { GraficarTotalComponent } from './components/recursos-humanos/reportes/graficar-resultados/graficar-total/graficar-total.component';
 import { AppConfig } from './config/app.config';
 import { ConfiguracionComponent } from './components/shared/configuracion/configuracion/configuracion.component';
+import { ReinscripcionComponent } from './components/reinscripcion/reinscripcion.component';
+
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 @NgModule({
   declarations: [
@@ -68,7 +71,8 @@ import { ConfiguracionComponent } from './components/shared/configuracion/config
     NavbarInicioComponent,
     ConfiguracionComponent,
     GraficarAreasComponent,
-    GraficarTotalComponent
+    GraficarTotalComponent,
+    ReinscripcionComponent
   ],
   imports: [
     BrowserModule,
@@ -76,7 +80,8 @@ import { ConfiguracionComponent } from './components/shared/configuracion/config
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    ChartsModule
+    ChartsModule,
+    SweetAlert2Module.forRoot(),
   ],
   providers: [
     AppConfig
