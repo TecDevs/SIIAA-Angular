@@ -7,6 +7,9 @@ import { ClimaLaboralComponent } from '../encuestas/clima-laboral/clima-laboral.
 import { RecursosHumanosComponent } from '../recursos-humanos/recursos-humanos.component';
 import { RECURSOS_HUMANOS_ROUTES } from '../recursos-humanos/recursos-humanos.routes';
 import { ConfiguracionComponent } from '../shared/configuracion/configuracion/configuracion.component';
+import { CoordinadorComponent } from '../coordinador/coordinador.component';
+
+
 export const INICIO_ROUTES: Routes = [
     {path: 'principal', component: PrincipalComponent},
     {path: 'actualizar-info', component: ActualizarInfoComponent},
@@ -16,5 +19,6 @@ export const INICIO_ROUTES: Routes = [
     {path: 'recursos-humanos', component: RecursosHumanosComponent,
     children: RECURSOS_HUMANOS_ROUTES
     },
+    {path: 'coordinador', component: CoordinadorComponent},
     {path: '**', pathMatch: 'full', redirectTo: 'principal'}
 ];

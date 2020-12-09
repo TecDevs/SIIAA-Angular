@@ -40,6 +40,7 @@ import { ConfiguracionComponent } from './components/shared/configuracion/config
 import { ReinscripcionComponent } from './components/reinscripcion/reinscripcion.component';
 
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+import { CoordinadorComponent } from './components/coordinador/coordinador.component';
 
 @NgModule({
   declarations: [
@@ -72,7 +73,8 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
     ConfiguracionComponent,
     GraficarAreasComponent,
     GraficarTotalComponent,
-    ReinscripcionComponent
+    ReinscripcionComponent,
+    CoordinadorComponent
   ],
   imports: [
     BrowserModule,
