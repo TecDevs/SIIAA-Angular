@@ -8,7 +8,12 @@ import { RecursosHumanosComponent } from '../recursos-humanos/recursos-humanos.c
 import { RECURSOS_HUMANOS_ROUTES } from '../recursos-humanos/recursos-humanos.routes';
 import { ConfiguracionComponent } from '../shared/configuracion/configuracion/configuracion.component';
 import { CoordinadorComponent } from '../coordinador/coordinador.component';
-
+import { PerfilAlumnoComponent } from '../alumnos/perfil-alumno/perfil-alumno.component';
+import { EncuestasAlumnoComponent } from '../alumnos/encuestas-alumno/encuestas-alumno.component'  
+import { ExtraescolaresAlumnoComponent } from '../alumnos/extraescolares-alumno/extraescolares-alumno.component'
+import { ServicioAlumnoComponent } from '../alumnos/servicio-alumno/servicio-alumno.component'
+import { CursoOfimaticaAlumnoComponent } from '../alumnos/curso-ofimatica-alumno/curso-ofimatica-alumno.component'
+import { ResidenciasAlumnoComponent } from '../alumnos/residencias-alumno/residencias-alumno.component'
 
 export const INICIO_ROUTES: Routes = [
     {path: 'principal', component: PrincipalComponent},
@@ -20,5 +25,15 @@ export const INICIO_ROUTES: Routes = [
     children: RECURSOS_HUMANOS_ROUTES
     },
     {path: 'coordinador', component: CoordinadorComponent},
+
+    // alumnos
+    {path: 'perfilalumno', component: PerfilAlumnoComponent },
+    {path: 'encuestasalumno', component: EncuestasAlumnoComponent },
+    {path: 'extraescolares', component: ExtraescolaresAlumnoComponent },
+    {path: 'serviciosocial', component: ServicioAlumnoComponent },
+    {path: 'cursoofimatica', component: CursoOfimaticaAlumnoComponent },
+    {path: 'residencias', component: ResidenciasAlumnoComponent },
+
+
     {path: '**', pathMatch: 'full', redirectTo: 'principal'}
 ];
