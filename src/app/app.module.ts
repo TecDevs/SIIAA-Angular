@@ -37,10 +37,16 @@ import { GraficarAreasComponent } from './components/recursos-humanos/reportes/g
 import { GraficarTotalComponent } from './components/recursos-humanos/reportes/graficar-resultados/graficar-total/graficar-total.component';
 import { AppConfig } from './config/app.config';
 import { ConfiguracionComponent } from './components/shared/configuracion/configuracion/configuracion.component';
-import { ReinscripcionComponent } from './components/reinscripcion/reinscripcion.component';
+import { ReinscripcionComponent } from '../app/components/alumnos/reinscripcion/reinscripcion.component';
 
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { CoordinadorComponent } from './components/coordinador/coordinador.component';
+import { PerfilAlumnoComponent } from '../app/components/alumnos/perfil-alumno/perfil-alumno.component';
+import { ServicioAlumnoComponent } from './components/alumnos/servicio-alumno/servicio-alumno.component';
+import { ResidenciasAlumnoComponent } from './components/alumnos/residencias-alumno/residencias-alumno.component';
+import { CursoOfimaticaAlumnoComponent } from './components/alumnos/curso-ofimatica-alumno/curso-ofimatica-alumno.component';
+import { ExtraescolaresAlumnoComponent } from './components/alumnos/extraescolares-alumno/extraescolares-alumno.component';
+import { EncuestasAlumnoComponent } from './components/alumnos/encuestas-alumno/encuestas-alumno.component';
 
 @NgModule({
   declarations: [
@@ -74,7 +80,13 @@ import { CoordinadorComponent } from './components/coordinador/coordinador.compo
     GraficarAreasComponent,
     GraficarTotalComponent,
     ReinscripcionComponent,
-    CoordinadorComponent
+    CoordinadorComponent,
+    PerfilAlumnoComponent,
+    ServicioAlumnoComponent,
+    ResidenciasAlumnoComponent,
+    CursoOfimaticaAlumnoComponent,
+    ExtraescolaresAlumnoComponent,
+    EncuestasAlumnoComponent
   ],
   imports: [
     BrowserModule,

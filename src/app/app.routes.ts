@@ -5,7 +5,7 @@ import { RegistroComponent } from './components/shared/registro/registro.compone
 import { InicioComponent } from './components/inicio/inicio.component';
 import { HomeComponent } from './components/shared/home/home.component';
 import { INICIO_ROUTES } from './components/inicio/inicio.routes';
-import { ReinscripcionComponent } from './components/reinscripcion/reinscripcion.component'
+import { ReinscripcionComponent } from '../app/components/alumnos/reinscripcion/reinscripcion.component'
 export const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'login', component: LoginComponent},
