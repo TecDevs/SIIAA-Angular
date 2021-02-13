@@ -25,15 +25,9 @@ export class LoginComponent implements OnInit {
           this.loginService.iniciarSesion(correo, contrasena).subscribe(
             data => {
               if (data === 'Contrasena incorrecta') {
-                swal.fire({
-                  title: 'Contraseña incorrecta',
-                  icon: 'error'
-                });
-              } else if (data === 'No existe') {
-                swal.fire({
-                  title: 'Este usuario no se encuentra registrado',
-                  icon: 'error'
-                });
+                swal.fire('Contraseña incorrecta', 'error');
+              } else if (data === 'Usuario no encontrado') {
+                swal.fire('Este usuario no se encuentra registrado', 'error');
               } else {
                 this.router.navigateByUrl('inicio');
                 localStorage.setItem('info-log', JSON.stringify(data));

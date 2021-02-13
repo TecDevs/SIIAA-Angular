@@ -11,19 +11,18 @@ export class AppComponent implements OnInit {
   login = false;
 
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
-  if (localStorage.getItem('info-log')) {
-    this.login = true;
+    if (localStorage.getItem('info-log')) {
+      this.login = true;
+    }
+    if (this.login) {
+      this.router.navigateByUrl('/inicio');
+    }
+    if (!this.login) {
+      // this.router.navigateByUrl('/registro');
+      this.router.navigateByUrl('/home');
+    }
   }
-  if (this.login) {
-    this.router.navigateByUrl('/home');
-  }
-  if (!this.login) {
-    // this.router.navigateByUrl('/login'); 
-    this.router.navigateByUrl('/inicio');
-  }
-  }
-  
 }

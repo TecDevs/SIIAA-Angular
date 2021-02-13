@@ -35,9 +35,9 @@ export class RegistroEmpleadosComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  registrarEmpleado() {  
+  registrarEmpleado() {
     console.log(this.formsRegistroEmpleados.value);
-    this.registroEmpleados.putEmpleados(this.formsRegistroEmpleados.value).subscribe(
+    this.registroEmpleados.registroEmpleados(this.formsRegistroEmpleados.value).subscribe(
       res => {
         console.log(res);
         console.log("agregado con exito");
