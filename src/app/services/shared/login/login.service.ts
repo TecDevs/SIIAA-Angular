@@ -11,8 +11,8 @@ export class LoginService {
   constructor(private http: HttpClient, private appConfig: AppConfig) { }
   iniciarSesion(correo: string, contrasena: string): Observable<any> {
     const body = {
-      correo,
-      contrasena
+      email: correo,
+      pass: contrasena
     };
     return this.http.post(this.appConfig.URL + 'api/login', body);
   }
