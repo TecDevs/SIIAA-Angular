@@ -49,7 +49,7 @@
                                                     <h5>Ingrese su correo para recuperar su contraseña</h5>
                                                     <div class="form-group">
                                                         <label for="correo:">Correo:</label>
-                                                        <input id="correoRecuperar" name="correoRecuperar" type="email" class="form-control" placeholder="Ingrese su correo">
+                                                        <input id="correoRecuperar" name="correoRecuperar" type="email" class="form-control" placeholder="Ingrese su correo" #correoR>
                                                         <small id="emailHelp" class="form-text text-muted">Ejemplo del
                                                             correo:
                                                             RaulLiderDev@itsmante.edu.mx.</small>
@@ -57,7 +57,7 @@
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                                                    <button class="btn btn-primary" onclick="form_click()" type="submit" form="frmRecupera">Recuperar</button>
+                                                    <button class="btn btn-primary" (click)="recuperarPassword(correoR.value)" type="submit" form="frmRecupera">Recuperar</button>
                                                 </div>
                                             </form>
                                         </div>

@@ -16,6 +16,13 @@ export class LoginService {
     };
     return this.http.post(this.appConfig.URL + 'api/login', body);
   }
+
+  recuperarPass(correo: string): Observable <any> {
+    const body = {
+      email: correo
+    };
+    return this.http.post(this.appConfig.URL + 'api/login/recover', body);
+  }
 }
 
 

@@ -87,4 +87,43 @@ export class LoginComponent implements OnInit {
     return true;
   }
 
+
+  recuperarPassword(correo: string) {
+    console.log(correo);
+    if(this.validarCorreoElectronico(correo)) {
+      console.log('validado');
+      
+      this.loginService.recuperarPass(correo).subscribe(
+        data => {
+          console.log(data);
+          if(data.success === 'Correo de recuperacion enviado') {
+          swal.fire({
+            icon: 'success',
+            title: 'correo enviado, revisar'
+          });
+        } else 
+          if(data.error === 'No se encontro el correo') {
+            swal.fire({
+              icon: 'error',
+              title: 'No se encontro el correo'
+            });
+          } else {
+            if(data.error === 'Error al enviar el E-Mail: ') {
+              swal.fire({
+                icon: 'error',
+                title: 'Ocurrio un error al enviar el correo'
+              });
+            
+          }
+        }
+        }, 
+        err => {
+          console.log(err);
+          
+        }
+      );
+    }
+
+  }
+
 }
